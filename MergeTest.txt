@@ -1,2 +1,2 @@
 Hi This is my frist GIT Commit
-third commitjshd
+third commit with MergeTest

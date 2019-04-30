@@ -1,3 +1,4 @@
 Hi This is my frist GIT Commit
 third commit with MergeTest
 Hello I have added a new content for git pull test
+Test for git config

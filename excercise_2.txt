@@ -1,0 +1,40 @@
+#include <stdio.h>
+#include <stdbool.h>
+
+char x[20],y[20];
+bool WildCmp(char *pattern, char *string);
+ 
+int main()
+{
+
+printf("Enter pattern string :");
+scanf("%s",x);
+printf("Enter string  ");
+scanf("%s",y);
+
+	if(WildCmp( x ,y))
+	{
+			printf("TRUE! Match Found");
+	}
+	else
+	{
+			printf("FALSE! Match Not Found");
+	}
+	
+	return 0;
+}
+ 
+ 
+bool WildCmp(char *pattern, char *string)
+{
+	if(*pattern=='\0' && *string=='\0')		
+		return true;
+		
+	if(*pattern=='?' || *pattern==*string)		
+		return WildCmp(pattern+1,string+1);
+		
+	if(*pattern=='*')
+		return WildCmp(pattern+1,string) || WildCmp(pattern,string+1);	
+		
+	return false;
+}
